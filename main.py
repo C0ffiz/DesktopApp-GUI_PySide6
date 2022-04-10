@@ -1,8 +1,3 @@
-# This is a sample Python script.
-
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
-
 import sys
 import os
 
@@ -14,6 +9,8 @@ from gui.windows.main_window.ui_main_window import *
 class MainWindow(QMainWindow):
     def __init__(self):
         super().__init__()
+
+        self.setWindowTitle("Curso de Python e PySide6")
 
         self.ui = UI_MainWindow()
         self.ui.setup_ui(self)
