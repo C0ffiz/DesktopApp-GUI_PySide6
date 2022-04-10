@@ -32,6 +32,8 @@ class UI_MainWindow(object):
         self.top_bar.setMinimumHeight(30)
         self.top_bar.setMaximumHeight(30)
         self.top_bar.setStyleSheet("background-color: #21232d; color: #6272a4")
+        self.top_bar_layout = QHBoxLayout(self.top_bar)
+        self.top_bar_layout.setContentsMargins(10,0,10,0)
 
         self.top_label_left = QLabel("Essa é minha primeira aplicação com PySide6")
 
@@ -40,6 +42,10 @@ class UI_MainWindow(object):
         self.top_label_right = QLabel("| PÁGINA INICIAL")
         self.top_label_right.setStyleSheet("font: 700 9pt 'Segoe UI'")
 
+        self.top_bar_layout.addWidget(self.top_label_left)
+        self.top_bar_layout.addItem(self.top_spacer)
+        self.top_bar_layout.addWidget(self.top_label_right)
+
         self.pages = QStackedWidget()
         self.pages.setStyleSheet("font-size: 12pt; color: #f8f8f2; background-color: red;")
 
@@ -47,6 +53,20 @@ class UI_MainWindow(object):
         self.bottom_bar.setMinimumHeight(30)
         self.bottom_bar.setMaximumHeight(30)
         self.bottom_bar.setStyleSheet("background-color: #21232d; color: #6272a4")
+
+        self.bottom_bar_layout = QHBoxLayout(self.bottom_bar)
+        self.bottom_bar_layout.setContentsMargins(10, 0, 10, 0)
+
+        self.bottom_bar_left = QLabel("Exemplo")
+
+        self.bottom_spacer = QSpacerItem(20, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
+
+        self.bottom_bar_right = QLabel("| Rodapé")
+        self.bottom_bar_right.setStyleSheet("font: 700 9pt 'Segoe UI'")
+
+        self.bottom_bar_layout.addWidget(self.bottom_bar_left)
+        self.bottom_bar_layout.addItem(self.bottom_spacer)
+        self.bottom_bar_layout.addWidget(self.bottom_bar_right)
 
         self.content_layout.addWidget(self.top_bar)
         self.content_layout.addWidget(self.pages)
