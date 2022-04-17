@@ -2,6 +2,7 @@ from qt_core import *
 
 from gui.pages.ui_pages import Ui_application_pages
 
+from gui.widgets.py_push_button import PyPushButton
 
 class UI_MainWindow(object):
     def setup_ui(self, parent):
@@ -41,9 +42,19 @@ class UI_MainWindow(object):
         self.left_menu_top_layout.setSpacing(0)
 
         #Botões Top Menu
-        self.toggle_button = QPushButton("Toggle")
-        self.btn1 = QPushButton("1")
-        self.btn2 = QPushButton("2")
+        self.toggle_button = PyPushButton(
+            text="Toggle"
+
+
+        )
+        self.btn1 = PyPushButton(
+            text="Página Inícial",
+            is_active=True
+        )
+        self.btn2 = PyPushButton(
+            text="Página 2"
+
+        )
 
         #Adicionar Botões
         self.left_menu_top_layout.addWidget(self.toggle_button)
@@ -65,7 +76,9 @@ class UI_MainWindow(object):
         self.left_menu_bottom_layout.setSpacing(0)
 
         #Botões Bottom Menu
-        self.settings_btn = QPushButton("Settings")
+        self.settings_btn = PyPushButton(
+            text="Configurações"
+        )
 
         self.left_menu_bottom_layout.addWidget(self.settings_btn)
 

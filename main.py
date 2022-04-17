@@ -32,7 +32,7 @@ class MainWindow(QMainWindow):
         self.animation.setStartValue(menu_width)
         self.animation.setEndValue(width)
         self.animation.setDuration(500)
-        self.animation.setEasingCurve(QEasingCurve.OutCirc)
+        self.animation.setEasingCurve(QEasingCurve.InOutCirc)
         self.animation.start()
 
 
