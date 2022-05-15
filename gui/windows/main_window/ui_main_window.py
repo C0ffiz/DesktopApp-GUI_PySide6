@@ -2,6 +2,8 @@ from qt_core import *
 
 from gui.pages.ui_pages import Ui_application_pages
 
+from gui.pages.ui_pages2 import Ui_StackedWidget
+
 from gui.widgets.py_push_button import PyPushButton
 
 class UI_MainWindow(object):
@@ -132,9 +134,9 @@ class UI_MainWindow(object):
         self.pages.setStyleSheet("font-size: 12pt; color: #f8f8f2;")
 
         #Instancia Classe da Tela e Chama função da Tela
-        self.ui_pages = Ui_application_pages()
+        self.ui_pages = Ui_StackedWidget()
         self.ui_pages.setupUi(self.pages)
-        self.pages.setCurrentWidget(self.ui_pages.page_2)
+        self.pages.setCurrentWidget(self.ui_pages.page_1)
 
         #Bottom Frame Description
         self.bottom_bar = QFrame()
