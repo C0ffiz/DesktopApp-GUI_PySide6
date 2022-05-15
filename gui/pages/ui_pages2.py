@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'pagesBSdTtC.ui'
+## Form generated from reading UI file 'pagesnloGTY.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.2.4
 ##
@@ -58,6 +58,8 @@ class Ui_StackedWidget(object):
         self.name_filter_txt = QLineEdit(self.tab_3)
         self.name_filter_txt.setObjectName(u"name_filter_txt")
         self.name_filter_txt.setGeometry(QRect(380, 30, 261, 31))
+        self.name_filter_txt.setStyleSheet(u"color: rgb(0, 0, 0);\n"
+"background-color: rgb(255, 255, 255);")
         self.search_btn = QPushButton(self.tab_3)
         self.search_btn.setObjectName(u"search_btn")
         self.search_btn.setGeometry(QRect(670, 20, 131, 41))
