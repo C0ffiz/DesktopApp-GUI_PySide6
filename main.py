@@ -1,7 +1,14 @@
+from msilib.schema import Error
+from multiprocessing import connection
+from socket import create_connection
 import sys
 import os
+from unittest import result
 
 from qt_core import *
+
+import mysql.connector
+from mysql.connector import errorcode
 
 from gui.windows.main_window.ui_main_window import *
 
@@ -12,13 +19,30 @@ class MainWindow(QMainWindow):
 
         self.setWindowTitle("Curso de Python e PySide6")
 
+        
         self.ui = UI_MainWindow()
         self.ui.setup_ui(self)
 
+        self.Handel_Buttons()
+
         self.ui.toggle_button.clicked.connect(self.toggle_button)
+
+        self.ui.btn1.clicked.connect(self.show_page_1)
+        
+        self.ui.btn2.clicked.connect(self.show_page_2)
+        
+        #self.ui.btn3.clicked.connect(self.show_page_3)
 
         self.show()
 
+    def show_page_1(self):
+        self.ui.pages.setCurrentWidget(self.ui.ui_pages.page_1)
+    
+    def show_page_2(self):
+        self.ui.pages.setCurrentWidget(self.ui.ui_pages.page_2)
+    
+    # def show_page_3(self):
+    #     self.ui.pages.setCurrentWidget(self.ui.ui_pages.page_3)
 
     def toggle_button(self):
         #Pegar Largura Menu Esquerdo
@@ -35,6 +59,38 @@ class MainWindow(QMainWindow):
         self.animation.setEasingCurve(QEasingCurve.InOutCirc)
         self.animation.start()
 
+    def Handel_Buttons(self):
+        self.ui.ui_pages.refresh_btn.clicked.connect(self.GET_DATA)
+
+    def GET_DATA(self):
+        try:    
+                con = mysql.connector.connect(
+                host= "localhost",
+                user= "root",
+                password= "tartaruga",
+                database= "pythonmysql") 
+        except mysql.connector.Error as err:
+            if err.errno == errorcode.ER_ACCESS_DENIED_ERROR:
+                print("Something is wrong with your user name or password")
+            elif err.errno == errorcode.ER_BAD_DB_ERROR:
+                print("Database does not exist")
+            else:
+                print(err)
+
+        cursor=con.cursor()
+
+        cursor.execute("SELECT * FROM clientes")
+
+        result = cursor.fetchall()
+
+        print(result)
+
+        self.ui.ui_pages.table.setRowCount(0)
+
+        for row_number, row_data in enumerate(result):
+            self.ui.ui_pages.table.insertRow(row_number)
+            for column_number, data in enumerate(row_data):
+                self.ui.ui_pages.table.setItem(row_number, column_number, QTableWidgetItem(str(data)))
 
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':

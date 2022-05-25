@@ -54,8 +54,8 @@ class UI_MainWindow(object):
             is_active=True
         )
         self.btn2 = PyPushButton(
-            text="Página 2"
-
+            text="Página 2",
+            
         )
 
         #Adicionar Botões
