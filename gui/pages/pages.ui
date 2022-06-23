@@ -23,7 +23,7 @@
       <x>0</x>
       <y>60</y>
       <width>831</width>
-      <height>411</height>
+      <height>471</height>
      </rect>
     </property>
     <property name="styleSheet">
@@ -31,8 +31,193 @@
 color: rgb(0, 0, 0);</string>
     </property>
     <property name="currentIndex">
-     <number>0</number>
+     <number>1</number>
     </property>
+    <widget class="QWidget" name="tab">
+     <attribute name="title">
+      <string>Cadastro</string>
+     </attribute>
+     <widget class="QLabel" name="label_3">
+      <property name="geometry">
+       <rect>
+        <x>210</x>
+        <y>125</y>
+        <width>91</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 255, 255);</string>
+      </property>
+      <property name="text">
+       <string>NOME</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_4">
+      <property name="geometry">
+       <rect>
+        <x>210</x>
+        <y>175</y>
+        <width>91</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 255, 255);</string>
+      </property>
+      <property name="text">
+       <string>EMAIL</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_5">
+      <property name="geometry">
+       <rect>
+        <x>210</x>
+        <y>225</y>
+        <width>91</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 255, 255);</string>
+      </property>
+      <property name="text">
+       <string>CPF</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_6">
+      <property name="geometry">
+       <rect>
+        <x>210</x>
+        <y>75</y>
+        <width>91</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 255, 255);</string>
+      </property>
+      <property name="text">
+       <string>CELULAR</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="le_nome">
+      <property name="geometry">
+       <rect>
+        <x>330</x>
+        <y>120</y>
+        <width>231</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(255, 255, 255);
+</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="le_cpf">
+      <property name="geometry">
+       <rect>
+        <x>330</x>
+        <y>220</y>
+        <width>231</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(255, 255, 255);
+</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="le_email">
+      <property name="geometry">
+       <rect>
+        <x>330</x>
+        <y>170</y>
+        <width>231</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(255, 255, 255);
+</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="le_celular">
+      <property name="geometry">
+       <rect>
+        <x>330</x>
+        <y>70</y>
+        <width>231</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="autoFillBackground">
+       <bool>false</bool>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(255, 255, 255);
+</string>
+      </property>
+      <property name="inputMethodHints">
+       <set>Qt::ImhNone</set>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="add_btn">
+      <property name="geometry">
+       <rect>
+        <x>250</x>
+        <y>300</y>
+        <width>101</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font: 11pt &quot;Century Gothic&quot;;
+background-color: rgb(98, 114, 164);
+color: rgb(255, 255, 255);</string>
+      </property>
+      <property name="text">
+       <string>Add</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="update_btn">
+      <property name="geometry">
+       <rect>
+        <x>360</x>
+        <y>300</y>
+        <width>101</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font: 11pt &quot;Century Gothic&quot;;
+background-color: rgb(98, 114, 164);
+color: rgb(255, 255, 255);</string>
+      </property>
+      <property name="text">
+       <string>Update</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="delete_btn">
+      <property name="geometry">
+       <rect>
+        <x>470</x>
+        <y>300</y>
+        <width>101</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font: 11pt &quot;Century Gothic&quot;;
+background-color: rgb(98, 114, 164);
+color: rgb(255, 255, 255);</string>
+      </property>
+      <property name="text">
+       <string>Delete</string>
+      </property>
+     </widget>
+    </widget>
     <widget class="QWidget" name="tab_3">
      <property name="styleSheet">
       <string notr="true"/>
@@ -51,6 +236,7 @@ color: rgb(0, 0, 0);</string>
       </property>
       <property name="styleSheet">
        <string notr="true">font: 11pt &quot;Century Gothic&quot;;
+background-color: rgb(255, 255, 255);
 
 
 </string>
@@ -91,7 +277,7 @@ color: rgb(0, 0, 0);</string>
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true"/>
+       <string notr="true">color: rgb(255, 255, 255);</string>
       </property>
       <property name="text">
        <string>Digite um nome para procurar:</string>
@@ -128,183 +314,22 @@ color: rgb(255, 255, 255);</string>
        <string>Procurar</string>
       </property>
      </widget>
-    </widget>
-    <widget class="QWidget" name="tab">
-     <attribute name="title">
-      <string>Editar Tabela</string>
-     </attribute>
-     <widget class="QLabel" name="label_3">
+     <widget class="QPushButton" name="refresh_btn">
       <property name="geometry">
        <rect>
-        <x>210</x>
-        <y>75</y>
-        <width>91</width>
-        <height>21</height>
+        <x>660</x>
+        <y>370</y>
+        <width>151</width>
+        <height>51</height>
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">color: rgb(255, 255, 255);</string>
-      </property>
-      <property name="text">
-       <string>NOME</string>
-      </property>
-     </widget>
-     <widget class="QLabel" name="label_4">
-      <property name="geometry">
-       <rect>
-        <x>210</x>
-        <y>125</y>
-        <width>91</width>
-        <height>21</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">color: rgb(255, 255, 255);</string>
-      </property>
-      <property name="text">
-       <string>EMAIL</string>
-      </property>
-     </widget>
-     <widget class="QLabel" name="label_5">
-      <property name="geometry">
-       <rect>
-        <x>210</x>
-        <y>175</y>
-        <width>91</width>
-        <height>21</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">color: rgb(255, 255, 255);</string>
-      </property>
-      <property name="text">
-       <string>CPF</string>
-      </property>
-     </widget>
-     <widget class="QLabel" name="label_6">
-      <property name="geometry">
-       <rect>
-        <x>210</x>
-        <y>225</y>
-        <width>91</width>
-        <height>21</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">color: rgb(255, 255, 255);</string>
-      </property>
-      <property name="text">
-       <string>CELULAR</string>
-      </property>
-     </widget>
-     <widget class="QLineEdit" name="le_nome">
-      <property name="geometry">
-       <rect>
-        <x>330</x>
-        <y>70</y>
-        <width>231</width>
-        <height>31</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">background-color: rgb(255, 255, 255);
-color: rgb(255, 255, 255);</string>
-      </property>
-     </widget>
-     <widget class="QLineEdit" name="le_cpf">
-      <property name="geometry">
-       <rect>
-        <x>330</x>
-        <y>170</y>
-        <width>231</width>
-        <height>31</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">background-color: rgb(255, 255, 255);
-color: rgb(255, 255, 255);</string>
-      </property>
-     </widget>
-     <widget class="QLineEdit" name="le_email">
-      <property name="geometry">
-       <rect>
-        <x>330</x>
-        <y>120</y>
-        <width>231</width>
-        <height>31</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">background-color: rgb(255, 255, 255);
-color: rgb(255, 255, 255);</string>
-      </property>
-     </widget>
-     <widget class="QLineEdit" name="le_celular">
-      <property name="geometry">
-       <rect>
-        <x>330</x>
-        <y>220</y>
-        <width>231</width>
-        <height>31</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">background-color: rgb(255, 255, 255);
-color: rgb(255, 255, 255);</string>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="add_btn">
-      <property name="geometry">
-       <rect>
-        <x>270</x>
-        <y>300</y>
-        <width>71</width>
-        <height>31</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">font: 11pt &quot;Century Gothic&quot;;
+       <string notr="true">font: 16pt &quot;Century Gothic&quot;;
 background-color: rgb(98, 114, 164);
 color: rgb(255, 255, 255);</string>
       </property>
       <property name="text">
-       <string>Add</string>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="update_btn">
-      <property name="geometry">
-       <rect>
-        <x>370</x>
-        <y>300</y>
-        <width>71</width>
-        <height>31</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">font: 11pt &quot;Century Gothic&quot;;
-background-color: rgb(98, 114, 164);
-color: rgb(255, 255, 255);</string>
-      </property>
-      <property name="text">
-       <string>Update</string>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="delete_btn">
-      <property name="geometry">
-       <rect>
-        <x>470</x>
-        <y>300</y>
-        <width>71</width>
-        <height>31</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">font: 11pt &quot;Century Gothic&quot;;
-background-color: rgb(98, 114, 164);
-color: rgb(255, 255, 255);</string>
-      </property>
-      <property name="text">
-       <string>Delete</string>
+       <string>Atualizar</string>
       </property>
      </widget>
     </widget>
@@ -330,27 +355,10 @@ background-color: rgb(33, 35, 45)
 </string>
     </property>
     <property name="text">
-     <string>Tabela</string>
+     <string>Cliente</string>
     </property>
     <property name="alignment">
      <set>Qt::AlignCenter</set>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="refresh_btn">
-    <property name="geometry">
-     <rect>
-      <x>654</x>
-      <y>480</y>
-      <width>151</width>
-      <height>51</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">font: 16pt &quot;Century Gothic&quot;;
-background-color: rgb(98, 114, 164);</string>
-    </property>
-    <property name="text">
-     <string>Atualizar</string>
     </property>
    </widget>
   </widget>
