@@ -22,8 +22,8 @@ class UI_MainWindow(object):
         if not parent.objectName():
             parent.setObjectName("MainWindow")
 
-        parent.resize(1200, 720)
-        parent.setMinimumSize(960, 540)
+        parent.resize(1341, 856)
+        parent.setMinimumSize(1341, 856)
 
         self.central_frame = QFrame()
 
@@ -57,16 +57,14 @@ class UI_MainWindow(object):
         #Botões Top Menu
         self.toggle_button = PyPushButton(
             text="Toggle"
-
-
         )
         self.btn1 = PyPushButton(
             text="Página Inícial",
             is_active=True
+            
         )
         self.btn2 = PyPushButton(
             text="Página 2",
-            
         )
 
         #Adicionar Botões
@@ -102,11 +100,6 @@ class UI_MainWindow(object):
         self.left_menu_label_version.setAlignment(Qt.AlignCenter)
         self.left_menu_label_version.setStyleSheet("color: #c3ccdf")
 
-        #Adicionar Frames, Spacer, Version
-        self.left_menu_layout.addWidget(self.left_menu_top_frame)
-        self.left_menu_layout.addItem(self.left_menu_spacer)
-        self.left_menu_layout.addWidget(self.left_menu_bottom_frame)
-        self.left_menu_layout.addWidget(self.left_menu_label_version)
 
         #Frame Telas
         self.content = QFrame()
@@ -135,10 +128,6 @@ class UI_MainWindow(object):
         self.top_label_right = QLabel("| PÁGINA INICIAL")
         self.top_label_right.setStyleSheet("font: 700 9pt 'Segoe UI'")
 
-        #Adicionar Label Esquerda e Direita, Spacer
-        self.top_bar_layout.addWidget(self.top_label_left)
-        self.top_bar_layout.addItem(self.top_spacer)
-        self.top_bar_layout.addWidget(self.top_label_right)
 
         #Cria Widget Pages
         self.pages = QStackedWidget()
@@ -148,6 +137,7 @@ class UI_MainWindow(object):
         self.ui_pages = Ui_StackedWidget()
         self.ui_pages.setupUi(self.pages)
         self.pages.setCurrentWidget(self.ui_pages.page_1)
+        
 
         #Bottom Frame Description
         self.bottom_bar = QFrame()
@@ -169,16 +159,28 @@ class UI_MainWindow(object):
         self.bottom_bar_right = QLabel("| Rodapé")
         self.bottom_bar_right.setStyleSheet("font: 700 9pt 'Segoe UI'")
 
+        #Adicionar Frames, Spacer, Version
+        self.left_menu_layout.addWidget(self.left_menu_top_frame)
+        self.left_menu_layout.addItem(self.left_menu_spacer)
+        self.left_menu_layout.addWidget(self.left_menu_bottom_frame)
+        self.left_menu_layout.addWidget(self.left_menu_label_version)
+
+        self.main_layout.addWidget(self.left_menu)
+
         #Adicionar
         self.bottom_bar_layout.addWidget(self.bottom_bar_left)
         self.bottom_bar_layout.addItem(self.bottom_spacer)
         self.bottom_bar_layout.addWidget(self.bottom_bar_right)
+        
+        #Adicionar Label Esquerda e Direita, Spacer
+        self.top_bar_layout.addWidget(self.top_label_left)
+        self.top_bar_layout.addItem(self.top_spacer)
+        self.top_bar_layout.addWidget(self.top_label_right)
 
         self.content_layout.addWidget(self.top_bar)
         self.content_layout.addWidget(self.pages)
         self.content_layout.addWidget(self.bottom_bar)
 
-        self.main_layout.addWidget(self.left_menu)
         self.main_layout.addWidget(self.content)
 
         parent.setCentralWidget(self.central_frame)

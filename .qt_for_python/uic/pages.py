@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'pagesDmsfjr.ui'
+## Form generated from reading UI file 'pages.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.2.4
 ##
@@ -389,9 +389,7 @@ class Ui_StackedWidget(object):
         self.le_estado.setMaximumSize(QSize(50, 16777215))
         self.le_estado.setStyleSheet(u"color: rgb(0, 0, 0);\n"
 "background-color: rgb(255, 255, 255);")
-        listEstados = ['AC','AL','AP','AM','BA','CE','DF','ES','GO','MA','MT','MS','MG','PA','PB','PR','PE','PI','RJ','RN','RS','RO','RR','SC','SP','SE','TO']
-        self.le_estado.addItems(listEstados)
-        
+
         self.horizontalLayout_12.addWidget(self.le_estado)
 
 
