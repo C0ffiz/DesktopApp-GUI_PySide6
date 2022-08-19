@@ -59,7 +59,7 @@ class UI_MainWindow(object):
             text="Toggle"
         )
         self.btn1 = PyPushButton(
-            text="Página Inícial",
+            text="Cadastro",
             is_active=True
             
         )
@@ -103,7 +103,7 @@ class UI_MainWindow(object):
 
         #Frame Telas
         self.content = QFrame()
-        self.content.setStyleSheet("background-color: #282a36")
+        self.content.setStyleSheet("background-color: #7a9e83")
 
         #Stack Telas
         self.content_layout = QVBoxLayout(self.content)
@@ -131,12 +131,12 @@ class UI_MainWindow(object):
 
         #Cria Widget Pages
         self.pages = QStackedWidget()
-        self.pages.setStyleSheet("font-size: 12pt; color: #f8f8f2;")
+        self.pages.setStyleSheet("font-size: 12pt; color: #111111;")
 
         #Instancia Classe da Tela e Chama função da Tela
         self.ui_pages = Ui_StackedWidget()
         self.ui_pages.setupUi(self.pages)
-        self.pages.setCurrentWidget(self.ui_pages.page_1)
+        self.pages.setCurrentWidget(self.ui_pages.page_2)
         
 
         #Bottom Frame Description

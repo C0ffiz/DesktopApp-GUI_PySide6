@@ -16,7 +16,9 @@ class PyPushButton(QPushButton):
             btn_color="#44475a",
             btn_hover="#4f5368",
             btn_pressed="#282a36",
-            is_active=False
+            is_active=False,
+            setFocusPolicy="NoFocus"
+            
     ):
         super().__init__()
 
@@ -34,6 +36,7 @@ class PyPushButton(QPushButton):
         self.btn_hover = btn_hover
         self.btn_pressed = btn_pressed
         self.is_active = is_active
+        self.setFocusPolicy(Qt.NoFocus);
 
         self.set_style(
             text_padding = self.text_padding,
